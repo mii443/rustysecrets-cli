@@ -1,19 +1,16 @@
-
-extern crate git_build_version;
-extern crate mime;
 extern crate clap;
+extern crate mime;
 
 use clap::Shell;
 
 use std::env;
-use std::path::Path;
 use std::fs;
+use std::path::Path;
 
 include!("src/cli.rs");
 
 fn main() {
     gen_completions();
-    expose_git_describe();
 }
 
 fn gen_completions() {
@@ -33,8 +30,4 @@ fn gen_completions() {
     app.gen_completions("rustysecrets", Shell::Zsh, &path);
     app.gen_completions("rustysecrets", Shell::Fish, &path);
     // app.gen_completions("rustysecrets", Shell::PowerShell, &outdir);
-}
-
-fn expose_git_describe() {
-    git_build_version::write_version(".").expect("Saving git version");
 }

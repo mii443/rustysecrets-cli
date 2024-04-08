@@ -17,21 +17,20 @@ name = "rustysecrets"
 path = "src/main.rs"
 
 [dependencies]
-rusty_secrets = "=0.2.1"
+rusty_secrets = { git = "https://github.com/mii443/RustySecrets" }
 clap = "^2.26"
-colored = "^1.5"
-error-chain = "^0.11.0"
+colored = "^2.1.0"
+error-chain = "^0.12.4"
 mime = "^0.3"
 log = { version = "^0.4", features = ["std"] }
 
 [dev-dependencies]
 tempdir = "^0.3"
-colored = "^1.5"
+colored = "^2.1.0"
 
 [build-dependencies]
 clap = "^2.26"
 mime = "^0.3"
-git-build-version = "^0.1"
 
 [profile.release]
 lto = true

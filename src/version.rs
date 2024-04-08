@@ -1,5 +1,3 @@
-include!(concat!(env!("OUT_DIR"), "/version.rs"));
-
 pub(crate) fn get() -> &'static str {
-    VERSION
+    "v0.2.1-pre"
 }
